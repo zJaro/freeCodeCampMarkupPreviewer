@@ -1,19 +1,16 @@
 import '../App.css';
 import  {useState} from 'react';
 
-function Editor(){
+function Editor({text, onTextChange}){
     
-    }
+    
     return(
-        
         <div>
-        <h3>Editor</h3>
-        <textarea onChange={handleText} id="editor"></textarea>
-        </div>
-        
-
+            <h3>Editor</h3>
+            <textarea value={text} onChange={onTextChange} id="editor"></textarea>
+        </div>  
     )
-
+}
 
 
 export default Editor

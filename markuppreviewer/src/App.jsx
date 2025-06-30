@@ -1,6 +1,7 @@
-import { useState } from 'react'
-
-import '../App.css'
+import { useState } from 'react';
+import Editor from './components/Editor';
+import Preview from './components/Previewer';
+import './App.css';
 
 function App() {
   const [text, setText] = useState(`# Welcome to my React Markdown Previewer!
@@ -45,7 +46,6 @@ And here. | Okay. | I think we get it.
 1. Use just 1s if you want!
 1. And last but not least, let's not forget embedded images:
 
-![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
 `)
     
   function handleText(event){
@@ -55,7 +55,8 @@ And here. | Okay. | I think we get it.
 
   return (
     <>
-    
+    <Editor text={text} onTextChange={handleText}></Editor>
+    <Preview markdownText={text}></Preview>
     </>
   )
 }
