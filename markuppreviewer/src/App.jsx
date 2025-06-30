@@ -56,7 +56,7 @@ And here. | Okay. | I think we get it.
   return (
     <>
     <Editor text={text} onTextChange={handleText}></Editor>
-    <Preview markdownText={text}></Preview>
+    <Preview text={text}></Preview>
     </>
   )
 }
