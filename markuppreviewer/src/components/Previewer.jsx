@@ -3,6 +3,11 @@ import { marked } from 'marked';
 
 import '../App.css'
 
+marked.setOptions({
+  gfm: true,
+  breaks: true, // Optional: enables carriage return support
+});
+
 function Preview({text}){
 
     return(
